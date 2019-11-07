@@ -1,10 +1,13 @@
 body {
-    background-image: url("assets/images/blue-and-purple-cosmic-sky-956999.jpg");
+    background-image: url("../images/blue-and-purple-cosmic-sky-956999.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 100%;
     
+}
+
+html {
+    min-height: 100%;
 }
 
 #banner {
@@ -33,5 +36,11 @@ body {
     border-color: aquamarine;
     text-align: center;
     margin: 10px;
+
+}
+
+.currentWord {
+    margin-bottom: 25px;
+    
 
 }

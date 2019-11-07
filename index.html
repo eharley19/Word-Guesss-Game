@@ -14,8 +14,10 @@
     />
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Damion&display=swap&effect=neon" rel="stylesheet">
+    <script src="assets/javascript/game.js"></script>
   </head>
   <body>
+      
     <h1 id="banner" class="font-effect-neon">Space Hangman</h1>
 
     <div class="container" id="mainsection">
@@ -24,22 +26,19 @@
              <h3 id="tagline">Guess the word...Save the universe...</h3>
         </div>
       </div>
+      
       <div class="row">
         
-       <div class="col-md-4" class="gamesection">
+        <div class="col-md-4" class="gamesection">
          <h4 id="score">Score:</h4>
          <h4 id="chances">Chances Remaining:</h4>
         </div>
 
         <div class="col-md-7" class="gamesection">
-         <h4 id="currentword">Current Word:</h4>
-        <h4 id="lettersused">Letters Used:</h4>
-
-      </div>
-
-
+          <h4 id="currentWord">Current Word:</h4>
+          <span id="answerSpace"></span>
+          <h4 id="lettersUsed">Letters Used:</h4>
         </div>
-
       </div>
     </div>
   </body>
