@@ -1,0 +1,1 @@
+var words =  ["extraterrestrial", "stellar", "galaxy", "planet", "asteroid"];

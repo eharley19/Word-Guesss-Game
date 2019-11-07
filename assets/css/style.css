@@ -1,0 +1,37 @@
+body {
+    background-image: url("assets/images/blue-and-purple-cosmic-sky-956999.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100%;
+    
+}
+
+#banner {
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 75px;
+    text-align: center;
+    padding: 20px;
+}
+
+#mainsection {
+    color: silver;
+    text-align: center;
+}
+
+#tagline  {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: 'Damion', cursive;
+    font-size: 40px;
+    color: silver;
+}
+
+#gamesection {
+    border: 5px;
+    border-color: aquamarine;
+    text-align: center;
+    margin: 10px;
+
+}
