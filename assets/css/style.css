@@ -40,7 +40,12 @@ html {
 }
 
 .currentWord {
-    margin-bottom: 25px;
+    margin-bottom: 1em;
     
+}
 
+.answerSpace {
+    font-size: larger;
+    font-weight: bold;
+    letter-spacing: 5px;
 }
