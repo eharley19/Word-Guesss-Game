@@ -18,34 +18,48 @@ window.onload = () => {
   var compWord = chooseWord();
   console.log(compWord);
 
-  var letterSpace = "";
-  var correctGuesses = [];
+  var letterSpace = [];
+  var usedLetters = [];
   var incorrectGuesses = [];
   var score = 0;
   var chances = 3;
 
   for (var i = 0; i < compWord.length; i++) {
-    letterSpace += " _";
+    letterSpace.push('_');
   }
     
-  document.getElementById("answerSpace").innerHTML = `<p>${letterSpace}</p>`;
+  document.getElementById("answerSpace").innerHTML = `<h2>${letterSpace.join(" ")}</h2>`;
   document.addEventListener("keypress", function(event) {
     var ltr = String.fromCharCode(event.keyCode);
+    usedLetters.push(ltr);
+    document.getElementById('used').innerHTML = `<h3>${usedLetters}</h3>`;
 
     if (compWord.indexOf(ltr) > -1) {
-      letterSpace[compWord.indexOf(ltr)] = ltr;
-      correctGuesses.push(ltr);
+    //   letterSpace[compWord.indexOf(ltr)] = ltr;
+    //   correctGuesses.push(ltr);
+        
+        for(var i = 0; i < compWord.length; i++) {
 
-      // stuck on how to get the letter in place of the underscore with corresponding index
-      document.getElementById("answerSpace").innerHTML = `<p> ${correctGuesses}</p>`;
+            if (compWord[i] === ltr) {
+                letterSpace[i] = ltr;
+                console.log(letterSpace);
+                document.getElementById("answerSpace").innerHTML = `<h2> ${letterSpace.join(" ")}</h2>`;
+            }
+        }
+
+
+
+
+    
+    
        
       
       
-      if (letterSpace.join == compWord) {
-            alert('You win!');
-            document.getElementById("score").innerHTML = `<p>${score + 1}</p>`;
+    //   if (letterSpace.join == compWord) {
+    //         alert('You win!');
+    //         document.getElementById("score").innerHTML = `<p>${score + 1}</p>`;
 
-        }
+    //     }
     }
     
     else {
