@@ -14,32 +14,63 @@ window.onload = () => {
     return words[Math.floor(Math.random() * words.length)];
   }
 
+
   var compWord = chooseWord();
   console.log(compWord);
 
   var letterSpace = "";
-  for (var i = 0; i < compWord.length; i++) {
-    letterSpace += "_";
-  }
+  var correctGuesses = [];
+  var incorrectGuesses = [];
+  var score = 0;
+  var chances = 3;
 
+  for (var i = 0; i < compWord.length; i++) {
+    letterSpace += " _";
+  }
+    
   document.getElementById("answerSpace").innerHTML = `<p>${letterSpace}</p>`;
   document.addEventListener("keypress", function(event) {
     var ltr = String.fromCharCode(event.keyCode);
+
     if (compWord.indexOf(ltr) > -1) {
       letterSpace[compWord.indexOf(ltr)] = ltr;
-      //display correct letter in place of underscore with corresponding index
-    } else {
-      //display incorrectly guessed letter in used letter section and reduce chances by one
+      correctGuesses.push(ltr);
+
+      // stuck on how to get the letter in place of the underscore with corresponding index
+      document.getElementById("answerSpace").innerHTML = `<p> ${correctGuesses}</p>`;
+       
+      
+      
+      if (letterSpace.join == compWord) {
+            alert('You win!');
+            document.getElementById("score").innerHTML = `<p>${score + 1}</p>`;
+
+        }
     }
+    
+    else {
+        incorrectGuesses.push(ltr);
+        chances--;
+        console.log(incorrectGuesses);
+        console.log(chances);
+    }
+
+    if (chances = 0) { 
+        alert("Game Over");
+    }
+    
+    
+    //display incorrectly guessed letter in used letter section and reduce chances by one
+    
   });
 
  
 };
 
-var score = 0;
+
 
 // give user limited number of chances
-var chances = 3;
+
 // have user guess letters of the word
 
 // show correct letters in spaces
