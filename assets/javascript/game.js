@@ -12,7 +12,7 @@ window.onload = () => {
     "comet",
     "cosmic",
     "meteorite",
-    "jupiter",-
+    "jupiter",
 
   ];
   function chooseWord() {
